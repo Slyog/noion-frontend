@@ -1,57 +1,118 @@
-# Noion.cloud
+# 🌞 Noion.cloud — The Thought Network
 
-A landing page for the Noion vision: solar-powered AI running on SolarEdgeCloud infrastructure.
+> **Powering Thought with Sunlight.**  
+> A solar-powered AI network connecting human ideas.
 
-## Development workflow
+---
 
-This repo uses two main branches:
+## 🧠 Vision
 
-- `main` - Production branch, kept clean and stable
-- `dev` - Development branch for testing and experiments
+**Noion.cloud** ist mehr als eine App — es ist ein Gedanken-Netzwerk.  
+Ein Ort, an dem Ideen leben, sich verknüpfen und zu kollektivem Wissen werden.
 
-### First-time setup
+Mit Hilfe von KI, semantischer Suche und solarbetriebener Cloud-Infrastruktur  
+(der **SolarEdgeCloud**) verwandelt Noion Gedanken in Energie — und Energie in Denken.
 
-```powershell
-# Clone the repo
+> _Noion = Noesis (Denken) + Ion (Energie)._  
+> Denken als Energieform.  
+
+---
+
+## ⚙️ Technologie
+
+| Layer | Beschreibung | Tech |
+|-------|---------------|------|
+| **Frontend** | Landingpage & Thought App | Next.js 15 · TailwindCSS · Framer Motion |
+| **Backend** | Semantische Analyse & Graph | FastAPI · Qdrant VectorDB |
+| **Infrastructure** | SolarEdgeCloud (Green Compute) | K3s · Terraform · Starlink · PV Power |
+| **Docs & Knowledge** | Obsidian Vault · GitHub Docs | Markdown · YAML · Roadmaps |
+
+---
+
+## 🪶 Features (MVP)
+
+- ✍️ **Thought Capture** – Gedanken eingeben oder sprechen  
+- 🧩 **Semantic Linking** – KI erkennt inhaltliche Zusammenhänge  
+- 🌐 **Graph Visualization** – Gedanken erscheinen als visuelles Netz  
+- ☀️ **Solar Compute** – Berechnungen laufen auf SolarEdgeCloud-Knoten  
+- 📱 **PWA** – funktioniert offline auf `app.noion.cloud`
+
+---
+
+## 🛠️ Development Setup
+
+```bash
 git clone https://github.com/slyse/Noion.cloud.git
 cd Noion.cloud
-
-# Install dependencies
 npm install
-
-# Start the dev server
 npm run dev
+# öffne http://localhost:3000
 ```
 
-### Branch workflow
+---
 
-Work on the `dev` branch for all changes:
+## 🎨 Design Language
 
-```powershell
-# Create and switch to dev branch
-git checkout -b dev
+| Element       | Farbe  | Hex      |
+|---------------|--------|----------|
+| Hintergrund   | night  | #0D1B2A  |
+| Sekundär      | night2 | #14253D  |
+| Akzent        | gold   | #FFD166  |
+| Text          | ivory  | #F1FAEE  |
 
-# Make your changes...
+- Typografie: Inter / Manrope  
+- Motion: Smooth fade & rise (Framer Motion)
 
-# Push dev branch to remote
-git push -u origin dev
+---
+
+## 🌍 Domains & Structure
+
+| Subdomain            | Zweck                          |
+|----------------------|--------------------------------|
+| `noion.cloud`        | Landingpage & Vision           |
+| `app.noion.cloud`    | PWA + Thought Network          |
+| `api.noion.cloud`    | Backend / Embeddings API       |
+| `docs.noion.cloud`   | Public Documentation           |
+| `solaredgecloud.com` | Infrastruktur & Cluster-Daten  |
+
+---
+
+## 🧭 Roadmap (2025–2026)
+
+| Phase   | Ziel                                           |
+|---------|------------------------------------------------|
+| Q4 2025 | Landingpage finalisieren, erste Nutzer gewinnen |
+| Q1 2026 | App-Prototyp mit Offline-Thought Capture       |
+| Q2 2026 | Ghana SolarEdgeCluster v0.1 online             |
+| Q3 2026 | Public Alpha, Open Graph API                   |
+| 2027+   | Expansion globaler solarbetriebener Edge-Nodes |
+
+---
+
+## 🤝 Contribute
+
+Noion.cloud ist ein offenes Projekt für Entwickler, Designer, Denker und Visionäre.
+Wenn du glaubst, dass Energie und Bewusstsein zusammengehören – mach mit.
+
+```bash
+# Fork & branch
+git checkout -b feature/your-idea
+git commit -m "Add feature"
+git push origin feature/your-idea
 ```
 
-When changes are tested and ready:
+Oder kontaktiere uns: `contact@noion.cloud`
 
-1. Create a pull request from `dev` to `main`
-2. Review the changes
-3. Merge to `main` when approved
+---
 
-## Available scripts
+## 🧩 Related Projects
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm start` - Start production server
-- `npm run lint` - Run linting
+- **SolarEdgeCloud.com** — solar-powered compute backbone  
+- **Noion-Docs** — Vision, Architektur, Research  
 
-## Tech stack
+---
 
-- Next.js (React)
-- Tailwind CSS
-- TypeScript
+## 📜 License
+
+MIT © 2025 Noion.cloud  
+“Powering Thought with Sunlight.”
