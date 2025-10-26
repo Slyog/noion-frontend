@@ -2,6 +2,7 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { MotionProvider } from "./providers/MotionProvider";
+import FaviconWatcher from "@/app/components/FaviconWatcher";
 
 export const metadata: Metadata = {
   title: "noion - your thoughts, linked",
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body className="antialiased">
         <MotionProvider>{children}</MotionProvider>
+        <FaviconWatcher />
       </body>
     </html>
   );
