@@ -1,77 +1,76 @@
-# Noion — Your thoughts, linked
+## Noion — Your thoughts, linked
 
-**Noion** ist eine minimalistische, schnelle Landingpage für das kommende **Relation Network**:  
-Ein lebender Wissensgraph, der Gedanken (Text oder Voice) verknüpft — nach Thema, Ort, Zeit und Stimmung.
+Noion is a minimal, fast landing page for the upcoming Relation Network:
+a living knowledge graph that links thoughts (text or voice) by topic, place, time, and mood.
 
-- Website: (bald) `app.noion.cloud`
-- Tech-Stack: **Next.js (App Router)** · **Tailwind** · **ScrollXUI** · **Framer Motion**
-- Claim: **Your thoughts, linked**
-- Kurzbeschreibung: **The Relation Network.**
+Website: coming soon at app.noion.cloud
 
----
+Tech stack: Next.js (App Router) · Tailwind · ScrollXUI · Framer Motion
 
-## ✨ Features (Frontend)
+Claim: Your thoughts, linked
 
-- **Hero / Value Proposition** im Noion-Branding (dark, gelb-grau, techno-clean)
-- **Living Graph**-Sektion (Produkt-Narrativ)
-- **Core Features** + **Feature-Matrix (Free vs. Premium)**
-- **How it works** (Capture – Connect – Decide)  
-  _Capture unterstützt Schreiben **oder Sprechen** → erzeugt Metadaten_
-- **Roadmap 2025** (MVP → Collective Graph → Integrationen)
-- **CTA: Waitlist** (funktionale API, speichert Einträge lokal)
+Short tagline: The Relation Network.
 
----
+##  Features (Frontend)
 
-## 🧩 Projektstruktur
+Hero / Value Proposition in Noion branding (dark, gold–gray, techno-clean)
 
+Living Graph section (product narrative)
+
+Core Features + Feature Matrix (Free vs. Premium)
+
+How it works (Capture – Connect – Decide)
+Capture supports typing or speaking → generates metadata
+
+Roadmap 2025 (MVP → Collective Graph → Integrations)
+
+CTA: Waitlist (working API, stores entries locally)
+
+##  Project Structure
+```bash
 app/
 ├─ api/
-│ └─ waitlist/
-│ └─ route.ts # POST /api/waitlist → data/waitlist.csv
-├─ components/ # Navbar, Hero, LivingGraph, Features, Matrix, Roadmap, CTA, Footer
+│  └─ waitlist/
+│     └─ route.ts       # POST /api/waitlist → data/waitlist.csv
+├─ components/          # Navbar, Hero, LivingGraph, Features, Matrix, Roadmap, CTA, Footer
 ├─ providers/
-│ └─ MotionProvider.tsx
-├─ layout.tsx # Metadata + Favicons + Manifest
-└─ page.tsx # Landingpage-Komposition
+│  └─ MotionProvider.tsx
+├─ layout.tsx           # Metadata + Favicons + Manifest
+└─ page.tsx             # Landing composition
 public/
-└─ favicons/ # favicon.ico + PNGs + site.webmanifest
+└─ favicons/            # favicon.ico + PNGs + site.webmanifest
 data/
-└─ waitlist.csv # lokale Speicherung (CSV)
+└─ waitlist.csv         # local CSV storage
 styles/
 └─ globals.css
+```
 
----
-
-## 🚀 Lokale Entwicklung
-
+## Local Development
 ```bash
-# Dependencies
+# Install deps
 npm install
 
-# Dev-Server starten
+# Start dev server
 npm run dev
 
-# Production-Build
+# Production build
 npm run build
 npm run start
 ```
+## Waitlist API (local)
 
-Standard-Port: http://localhost:3000
-
-📮 Waitlist API (lokal)
-
-Die Landingpage hat eine kleine, serverseitige Route:
+The landing page exposes a tiny server route:
 
 POST /api/waitlist → { email }
 
-Speichert Einträge in data/waitlist.csv (Header: email,timestamp)
+Stores entries in data/waitlist.csv (columns: email,timestamp)
 
-Formular befindet sich in app/components/CTA.tsx.
-Ziel: schneller Proof-of-Concept ohne externe Abhängigkeiten.
+The form lives in app/components/CTA.tsx.
+Goal: quick proof of concept with zero external dependencies.
 
-🖼️ Favicons & Manifest
+## Favicons & Manifest
 
-Alle Assets liegen in /public/favicons.
+All assets live in /public/favicons.
 
 favicon.ico
 
@@ -81,7 +80,7 @@ noion_favicon_512.png
 
 noion_mark_512_transparent.png (maskable)
 
-app/layout.tsx enthält:
+app/layout.tsx includes:
 
 ```ts
 export const metadata = {
