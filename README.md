@@ -1,119 +1,105 @@
-# 🌞 Noion.cloud - The Thought Network
+# Noion — Your thoughts, linked
 
-> **Powering Thought with Sunlight.**  
-> A solar-powered AI network connecting human ideas.
+**Noion** ist eine minimalistische, schnelle Landingpage für das kommende **Relation Network**:  
+Ein lebender Wissensgraph, der Gedanken (Text oder Voice) verknüpft — nach Thema, Ort, Zeit und Stimmung.
 
----
-
-## 🧠 Vision
-
-**Noion.cloud** ist mehr als eine App - es ist ein Gedanken-Netzwerk.  
-Ein Ort, an dem Ideen leben, sich verknüpfen und zu kollektivem Wissen werden.
-
-Mit Hilfe von KI, semantischer Suche und solarbetriebener Cloud-Infrastruktur  
-(der **SolarEdgeCloud**) verwandelt Noion Gedanken in Energie - und Energie in Denken.
-
-> _Noion = Noesis (Denken) + Ion (Energie)._  
-> Denken als Energieform.  
+- Website: (bald) `app.noion.cloud`
+- Tech-Stack: **Next.js (App Router)** · **Tailwind** · **ScrollXUI** · **Framer Motion**
+- Claim: **Your thoughts, linked**
+- Kurzbeschreibung: **The Relation Network.**
 
 ---
 
-## ⚙️ Technologie
+## ✨ Features (Frontend)
 
-| Layer | Beschreibung | Tech |
-|-------|---------------|------|
-| **Frontend** | Landingpage & Thought App | Next.js 15 · TailwindCSS · Framer Motion |
-| **Backend** | Semantische Analyse & Graph | FastAPI · Qdrant VectorDB |
-| **Infrastructure** | SolarEdgeCloud (Green Compute) | K3s · Terraform · Starlink · PV Power |
-| **Docs & Knowledge** | Obsidian Vault · GitHub Docs | Markdown · YAML · Roadmaps |
-
----
-
-## 🪶 Features (MVP)
-
-- ✍️ **Thought Capture** – Gedanken eingeben oder sprechen  
-- 🧩 **Semantic Linking** – KI erkennt inhaltliche Zusammenhänge  
-- 🌐 **Graph Visualization** – Gedanken erscheinen als visuelles Netz  
-- ☀️ **Solar Compute** – Berechnungen laufen auf SolarEdgeCloud-Knoten  
-- 📱 **PWA** – funktioniert offline auf `app.noion.cloud`
+- **Hero / Value Proposition** im Noion-Branding (dark, gelb-grau, techno-clean)
+- **Living Graph**-Sektion (Produkt-Narrativ)
+- **Core Features** + **Feature-Matrix (Free vs. Premium)**
+- **How it works** (Capture – Connect – Decide)  
+  _Capture unterstützt Schreiben **oder Sprechen** → erzeugt Metadaten_
+- **Roadmap 2025** (MVP → Collective Graph → Integrationen)
+- **CTA: Waitlist** (funktionale API, speichert Einträge lokal)
 
 ---
 
-## 🛠️ Development Setup
+## 🧩 Projektstruktur
+
+app/
+├─ api/
+│ └─ waitlist/
+│ └─ route.ts # POST /api/waitlist → data/waitlist.csv
+├─ components/ # Navbar, Hero, LivingGraph, Features, Matrix, Roadmap, CTA, Footer
+├─ providers/
+│ └─ MotionProvider.tsx
+├─ layout.tsx # Metadata + Favicons + Manifest
+└─ page.tsx # Landingpage-Komposition
+public/
+└─ favicons/ # favicon.ico + PNGs + site.webmanifest
+data/
+└─ waitlist.csv # lokale Speicherung (CSV)
+styles/
+└─ globals.css
+
+---
+
+## 🚀 Lokale Entwicklung
 
 ```bash
-git clone https://github.com/slyse/Noion.cloud.git
-cd Noion.cloud
+# Dependencies
 npm install
+
+# Dev-Server starten
 npm run dev
-# öffne http://localhost:3000
+
+# Production-Build
+npm run build
+npm run start
 ```
 
----
+Standard-Port: http://localhost:3000
 
-## 🎨 Design Language
+📮 Waitlist API (lokal)
 
-| Element       | Farbe  | Hex      |
-|---------------|--------|----------|
-| Hintergrund   | night  | #0D1B2A  |
-| Sekundär      | night2 | #14253D  |
-| Akzent        | gold   | #FFD166  |
-| Text          | ivory  | #F1FAEE  |
+Die Landingpage hat eine kleine, serverseitige Route:
 
-- Typografie: Inter / Manrope  
-- Motion: Smooth fade & rise (Framer Motion)
+POST /api/waitlist → { email }
 
----
+Speichert Einträge in data/waitlist.csv (Header: email,timestamp)
 
-## 🌍 Domains & Structure
+Formular befindet sich in app/components/CTA.tsx.
+Ziel: schneller Proof-of-Concept ohne externe Abhängigkeiten.
 
-| Subdomain            | Zweck                          |
-|----------------------|--------------------------------|
-| `noion.cloud`        | Landingpage & Vision           |
-| `app.noion.cloud`    | PWA + Thought Network          |
-| `api.noion.cloud`    | Backend / Embeddings API       |
-| `docs.noion.cloud`   | Public Documentation           |
-| `solaredgecloud.com` | Infrastruktur & Cluster-Daten  |
+🖼️ Favicons & Manifest
 
----
+Alle Assets liegen in /public/favicons.
 
-## 🧭 Roadmap (2025–2026)
+favicon.ico
 
-| Phase   | Ziel                                           |
-|---------|------------------------------------------------|
-| Q4 2025 | Landingpage finalisieren, erste Nutzer gewinnen |
-| Q1 2026 | App-Prototyp mit Offline-Thought Capture       |
-| Q2 2026 | Ghana SolarEdgeCluster v0.1 online             |
-| Q3 2026 | Public Alpha, Open Graph API                   |
-| 2027+   | Expansion globaler solarbetriebener Edge-Nodes |
+noion_favicon_180.png (Apple)
 
----
+noion_favicon_512.png
 
-## 🤝 Contribute
+noion_mark_512_transparent.png (maskable)
 
-Noion.cloud ist ein offenes Projekt für Entwickler, Designer, Denker und Visionäre.
-Wenn du glaubst, dass Energie und Bewusstsein zusammengehören – mach mit.
+app/layout.tsx enthält:
 
-```bash
-# Fork & branch
-git checkout -b feature/your-idea
-git commit -m "Add feature"
-git push origin feature/your-idea
+```ts
+export const metadata = {
+  title: "Noion - Your thoughts, linked",
+  description: "The Relation Network.",
+  icons: {
+    icon: "/favicons/favicon.ico",
+    shortcut: "/favicons/favicon.ico",
+    apple: "/favicons/noion_favicon_180.png",
+    other: [
+      { rel: "mask-icon", url: "/favicons/noion_mark_512_transparent.png" },
+      {
+        rel: "icon",
+        url: "/favicons/noion_favicon_512.png",
+        type: "image/png",
+      },
+    ],
+  },
+  manifest: "/favicons/site.webmanifest",
+};
 ```
-
-Oder kontaktiere uns: `contact@noion.cloud`
-
----
-
-## 🧩 Related Projects
-
-- **SolarEdgeCloud.com** - solar-powered compute backbone  
-- **Noion-Docs** - Vision, Architektur, Research  
-
----
-
-## 📜 License
-
-MIT © 2025 Noion.cloud  
-“Powering Thought with Sunlight.”
-
