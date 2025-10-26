@@ -1,0 +1,53 @@
+:root {
+  --scrollxui-radius: 16px;
+  --scrollxui-border: rgba(255, 255, 255, 0.08);
+  --scrollxui-surface: rgba(9, 9, 13, 0.85);
+  --scrollxui-surface-muted: rgba(13, 13, 19, 0.6);
+  --scrollxui-text: #f4f4f0;
+  --scrollxui-text-muted: rgba(244, 244, 240, 0.65);
+  --scrollxui-accent: #ffd166;
+}
+
+.sx-card {
+  border-radius: var(--scrollxui-radius);
+  border: 1px solid var(--scrollxui-border);
+  background: var(--scrollxui-surface);
+  color: var(--scrollxui-text);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.45);
+}
+
+.sx-glow {
+  position: relative;
+  isolation: isolate;
+}
+
+.sx-glow::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 209, 102, 0.22) 0%,
+    transparent 60%
+  );
+  filter: blur(32px);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sx-fade-up {
+    animation: sxFadeUp 0.7s ease-out both;
+  }
+}
+
+@keyframes sxFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

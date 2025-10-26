@@ -1,24 +1,40 @@
-module.exports = {
+import { scrollxuiTheme } from "scrollxui/theme";
+
+export default {
+  darkMode: "class",
   content: [
-    "./pages/**/*.{js,jsx,ts,tsx}",
-    "./components/**/*.{js,jsx,ts,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/scrollxui/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        primary: "#00D4FF", // Electric Cyan - Energie & Cloud
-        accent: "#FFD700", // Solar Gold - Wärme & Nachhaltigkeit
-        base: "#0F0F17", // Dark Base - Techno / Club Hintergrund
-        surface: "#1E1E2E", // Panel / Card Hintergrund
-        text: "#E5E7EB", // Weißgrau - klare Lesbarkeit
-        muted: "#9CA3AF", // sekundärer Text
-        donate: "#10B981", // Grün für Spendenbutton (Vertrauen, Positivität)
-        night: "#05050F",
-        night2: "#121226",
-        gold: "#FFD700",
-        ivory: "#F4F4F0",
+        ...scrollxuiTheme.colors,
+        background: "#0b0b0c",
+        surface: "#131315",
+        primary: {
+          DEFAULT: "#facc15",
+          hover: "#fde047",
+        },
+        accent: {
+          DEFAULT: "#ffdd66",
+          dim: "#bfae4a",
+        },
+        text: {
+          DEFAULT: "#f4f4f5",
+          subtle: "#a1a1aa",
+        },
+        border: "#27272a",
+      },
+      fontFamily: {
+        sans: ["Inter", "system-ui", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
+      },
+      boxShadow: {
+        glow: "0 0 20px rgba(250,204,21,0.15)",
       },
     },
   },
-  plugins: [],
+  plugins: [require("scrollxui/plugin")],
 };

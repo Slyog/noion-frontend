@@ -1,0 +1,22 @@
+<svg width="640" height="480" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="connect-glow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFD166" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#0D1B2A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="connect-line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFD166"/>
+      <stop offset="100%" stop-color="#14AADC"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="480" fill="#0D1B2A"/>
+  <circle cx="320" cy="220" r="200" fill="url(#connect-glow)"/>
+  <g stroke="url(#connect-line)" stroke-width="2" stroke-linecap="round">
+    <path d="M140 360 Q320 200 500 360"/>
+    <path d="M180 140 Q320 300 460 140"/>
+    <circle cx="320" cy="240" r="110" fill="none" stroke-width="1.5" opacity="0.6"/>
+    <circle cx="320" cy="240" r="60" fill="none" stroke-width="1" opacity="0.4"/>
+    <circle cx="320" cy="240" r="20" fill="#101c2e"/>
+  </g>
+  <circle cx="320" cy="240" r="8" fill="#FFD166"/>
+</svg>

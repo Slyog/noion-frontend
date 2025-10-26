@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { FormEvent, useState } from "react";
 import { motion } from "framer-motion";
@@ -11,88 +11,74 @@ export default function WaitlistSection() {
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (!email) {
-      return;
-    }
+    if (!email) return;
 
     setStatus("loading");
-
     try {
       const response = await fetch("/api/waitlist", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
       });
-
-      if (!response.ok) {
-        throw new Error("Failed to submit");
-      }
-
-      setStatus("success");
+      if (!response.ok) throw new Error("Failed to submit");
       setEmail("");
+      setStatus("success");
     } catch {
       setStatus("error");
     }
   };
 
   return (
-    <section
+    <motion.section
       id="waitlist"
-      className="relative bg-surface/70 backdrop-blur-lg py-24 px-6 text-center border-t border-primary/10"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="max-w-5xl mx-auto px-6 md:px-10 pt-6 pb-16 text-center space-y-6"
     >
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-4xl font-semibold text-primary mb-4"
-      >
-        Join the Waitlist
-      </motion.h2>
+      <h2 className="text-4xl font-bold">Join the Waitlist</h2>
+      <p className="text-ivory/80 max-w-2xl mx-auto">
+        Be among the first to explore the Relation Network. Early supporters
+        will receive access to the Noion beta.
+      </p>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.2, duration: 0.6 }}
-        className="text-muted max-w-xl mx-auto mb-8 text-lg"
-      >
-        Be part of the Noion movement - get early access to SolarEdgeCloud and future updates.
-      </motion.p>
-
-      <motion.form
-        onSubmit={handleSubmit}
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.4, duration: 0.6 }}
-        className="flex flex-col sm:flex-row justify-center gap-4 max-w-md mx-auto"
-      >
-        <label className="sr-only" htmlFor="waitlist-email">
-          Email address
-        </label>
-        <input
-          id="waitlist-email"
-          type="email"
-          required
-          placeholder="you@example.com"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-          className="w-full sm:w-72 px-4 py-3 rounded-xl bg-base border border-primary/20 text-text placeholder-muted focus:outline-none focus:border-primary transition"
-        />
-
-        <button
-          type="submit"
-          disabled={status === "loading"}
-          className="bg-primary text-black font-semibold px-6 py-3 rounded-xl hover:bg-accent transition disabled:opacity-50"
-        >
-          {status === "loading" ? "Sending..." : "Join"}
-        </button>
-      </motion.form>
+      <div className="max-w-md mx-auto">
+        <div className="card-translucent rounded-xl p-6 shadow-obsidian">
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col sm:flex-row gap-4"
+          >
+            <label htmlFor="waitlist-email" className="sr-only">
+              Email address
+            </label>
+            <input
+              id="waitlist-email"
+              type="email"
+              required
+              placeholder="you@example.com"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+              className="flex-1 rounded-md border border-night2 bg-transparent px-4 py-3 text-ivory placeholder:opacity-60 focus:outline-none focus:ring-2 focus:ring-[rgba(255,209,102,0.18)]"
+            />
+            <button
+              type="submit"
+              disabled={status === "loading"}
+              className="rounded-md btn-gold px-6 py-3 font-semibold transition disabled:opacity-60"
+            >
+              {status === "loading" ? "Sending..." : "Join"}
+            </button>
+          </form>
+        </div>
+      </div>
 
       {status === "success" && (
-        <p className="text-donate mt-6 font-medium">✅ You’re on the list! Thank you for joining.</p>
+        <p className="text-gold">✅ You’re on the list - thank you.</p>
       )}
       {status === "error" && (
-        <p className="text-red-500 mt-6 font-medium">⚠️ Something went wrong. Please try again.</p>
+        <p className="text-red-400">
+          ⚠️ Something went wrong. Please try again.
+        </p>
       )}
-    </section>
+    </motion.section>
   );
 }

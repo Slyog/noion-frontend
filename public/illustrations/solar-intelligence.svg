@@ -1,0 +1,19 @@
+<svg width="640" height="480" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="solar-core" cx="50%" cy="50%" r="45%">
+      <stop offset="0%" stop-color="#FFD166" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0D1B2A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="480" fill="#0D1B2A"/>
+  <circle cx="320" cy="240" r="190" fill="url(#solar-core)"/>
+  <circle cx="320" cy="240" r="130" stroke="#FFD166" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <circle cx="320" cy="240" r="70" stroke="#14AADC" stroke-width="1" fill="none" opacity="0.5"/>
+  <g stroke="#FFD166" stroke-width="2" stroke-linecap="round">
+    <line x1="320" y1="70" x2="320" y2="110"/>
+    <line x1="320" y1="370" x2="320" y2="330"/>
+    <line x1="150" y1="240" x2="190" y2="240"/>
+    <line x1="490" y1="240" x2="450" y2="240"/>
+  </g>
+  <circle cx="320" cy="240" r="20" fill="#FFD166"/>
+</svg>

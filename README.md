@@ -1,4 +1,4 @@
-# 🌞 Noion.cloud — The Thought Network
+# 🌞 Noion.cloud - The Thought Network
 
 > **Powering Thought with Sunlight.**  
 > A solar-powered AI network connecting human ideas.
@@ -7,11 +7,11 @@
 
 ## 🧠 Vision
 
-**Noion.cloud** ist mehr als eine App — es ist ein Gedanken-Netzwerk.  
+**Noion.cloud** ist mehr als eine App - es ist ein Gedanken-Netzwerk.  
 Ein Ort, an dem Ideen leben, sich verknüpfen und zu kollektivem Wissen werden.
 
 Mit Hilfe von KI, semantischer Suche und solarbetriebener Cloud-Infrastruktur  
-(der **SolarEdgeCloud**) verwandelt Noion Gedanken in Energie — und Energie in Denken.
+(der **SolarEdgeCloud**) verwandelt Noion Gedanken in Energie - und Energie in Denken.
 
 > _Noion = Noesis (Denken) + Ion (Energie)._  
 > Denken als Energieform.  
@@ -107,8 +107,8 @@ Oder kontaktiere uns: `contact@noion.cloud`
 
 ## 🧩 Related Projects
 
-- **SolarEdgeCloud.com** — solar-powered compute backbone  
-- **Noion-Docs** — Vision, Architektur, Research  
+- **SolarEdgeCloud.com** - solar-powered compute backbone  
+- **Noion-Docs** - Vision, Architektur, Research  
 
 ---
 
@@ -116,3 +116,4 @@ Oder kontaktiere uns: `contact@noion.cloud`
 
 MIT © 2025 Noion.cloud  
 “Powering Thought with Sunlight.”
+
