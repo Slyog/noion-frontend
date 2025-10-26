@@ -8,13 +8,17 @@ export function useFaviconStatus(url = process.env.NEXT_PUBLIC_HEALTH_URL || "/a
 
     const setFavicon = (href: string) => {
       const head = document.head;
-      Array.from(head.querySelectorAll("link[rel*='icon']")).forEach((link) =>
-        head.removeChild(link)
+      let el = head.querySelector<HTMLLinkElement>(
+        "link[data-favicon-watcher='true']"
       );
-      const el = document.createElement("link");
-      el.rel = "icon";
+      if (!el) {
+        el = document.createElement("link");
+        el.rel = "icon";
+        el.type = "image/x-icon";
+        el.setAttribute("data-favicon-watcher", "true");
+        head.appendChild(el);
+      }
       el.href = href;
-      head.appendChild(el);
     };
 
     const check = async () => {
