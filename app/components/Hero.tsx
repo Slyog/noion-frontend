@@ -1,10 +1,19 @@
 "use client";
-import { motion } from "framer-motion";
+import Link from "next/link";
+import { track } from "@/lib/analytics";
 
-function DiscordIcon({ className = "" }: { className?: string }) {
+const copy = {
+  title: "Noion",
+  sub: "Your thoughts, linked",
+  body:
+    "Every note becomes a node that auto-links to your older ideas. Mood, place, and time are captured so patterns show up fast.",
+  discord: "Join Discord",
+};
+
+function DiscordIcon() {
   return (
     <svg
-      className={`h-6 w-6 ${className}`}
+      className="h-5 w-5"
       viewBox="0 0 24 24"
       fill="currentColor"
       aria-hidden="true"
@@ -16,55 +25,25 @@ function DiscordIcon({ className = "" }: { className?: string }) {
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative isolate px-6 py-44 text-center">
-      <motion.h1
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-6xl font-bold tracking-tight"
-      >
-        Noion
-      </motion.h1>
+    <section className="bg-night text-ivory">
+      <div className="mx-auto max-w-3xl px-6 pt-28 pb-12 text-center">
+        <h1 className="text-5xl font-bold tracking-tight">{copy.title}</h1>
+        <p className="mt-2 text-lg text-ivory/80">{copy.sub}</p>
+        <p className="mx-auto mt-4 max-w-2xl text-base text-ivory/70">{copy.body}</p>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.4, duration: 0.8 }}
-        className="mt-6 text-xl opacity-80"
-      >
-        Your thoughts, linked
-      </motion.p>
-
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.7, duration: 0.8 }}
-        className="mt-4 mx-auto max-w-2xl text-lg opacity-80"
-      >
-        Noion keeps a living map of your thoughts. Each new note becomes a node
-        that links to older notes and related ideas, so mood, place, and time
-        patterns show up fast. Start from one spark and hop straight to the next
-        connection.
-      </motion.p>
-
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1, duration: 0.6 }}
-        className="mt-10 flex items-center justify-center gap-4"
-      >
-        <a
-          href="https://discord.gg/noioncloud"
+        <Link
+          href="https://discord.gg/YPUzH4xqwS"
           target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-3 rounded-full border border-white/40 px-6 py-3 text-white transition hover:scale-105"
+          rel="noreferrer"
+          data-analytics="cta_discord_hero"
+          onClick={() => track("cta_discord_hero")}
+          className="mx-auto mt-8 inline-flex items-center justify-center gap-2 rounded-xl border border-gold/50 px-6 py-3 font-medium text-ivory transition hover:border-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60 focus-visible:ring-offset-2 focus-visible:ring-offset-night"
+          aria-label={copy.discord}
         >
-          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10">
-            <DiscordIcon className="h-5 w-5 text-white" />
-          </span>
-          <span className="text-base font-semibold tracking-wide">Join Discord</span>
-        </a>
-      </motion.div>
+          <DiscordIcon />
+          {copy.discord}
+        </Link>
+      </div>
     </section>
   );
 }

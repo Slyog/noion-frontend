@@ -1,4 +1,3 @@
-// content/tiers.ts
 export type Tier = {
   name: string;
   tagline: string;
@@ -8,32 +7,32 @@ export type Tier = {
 export const tiers: Tier[] = [
   {
     name: "Free",
-    tagline: "Capture & auto-link — dein privates Grundgerüst.",
+    tagline: "Capture & auto-link — your private base layer.",
     bullets: [
-      "Markdown-Notizen und Voice Capture",
-      "Auto-Links zu bestehenden Gedanken",
-      "Private Sync, Offline-fähig",
-      "Basale Pattern-Ansicht (Zeit, Ort, Stimmung)",
+      "Markdown notes and voice capture",
+      "Auto-links back to existing thoughts",
+      "Private sync with offline mode",
+      "Foundational pattern view (time, place, mood)",
     ],
   },
   {
     name: "Premium",
-    tagline: "Mehr Kontext, mehr Weitblick — wachse in den Graph hinein.",
+    tagline: "More context, more range — grow deeper into the graph.",
     bullets: [
-      "Erweiterte Pattern- & Timeline-Views",
-      "Custom Tags & Entities (People, Projects, Places)",
-      "Erweiterte Auto-Link-Regeln",
-      "Priority-Sync & experimentelle Features",
+      "Expanded pattern and timeline views",
+      "Custom tags and entities (people, projects, places)",
+      "Advanced auto-link rules",
+      "Priority sync and experimental drops",
     ],
   },
   {
     name: "Team (coming soon)",
-    tagline: "Resonanz in kleinen Crews — der kollektive Graph.",
+    tagline: "Resonance for tight crews — the collective graph.",
     bullets: [
-      "Geteilte Boards & Echtzeit-Links",
-      "Rollen & Sichtbarkeiten",
-      "Geo- & Zeitlayer über mehrere Personen",
-      "Frühe Integrationen (API Keys, Webhooks)",
+      "Shared boards with real-time linking",
+      "Roles and visibility controls",
+      "Geo and time layers across teammates",
+      "Early integrations (API keys, webhooks)",
     ],
   },
 ];

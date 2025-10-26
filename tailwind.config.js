@@ -26,6 +26,10 @@ export default {
           subtle: "#a1a1aa",
         },
         border: "#27272a",
+        night: "#0e0e0f",
+        night2: "#131314",
+        ivory: "#e7e7e7",
+        gold: "#f2c94c",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
@@ -33,6 +37,7 @@ export default {
       },
       boxShadow: {
         glow: "0 0 20px rgba(250,204,21,0.15)",
+        soft: "0 6px 24px rgba(0,0,0,0.25)",
       },
     },
   },

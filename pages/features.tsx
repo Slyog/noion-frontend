@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Brain, Users, Shield } from "lucide-react";
 import SectionShell from "../components/SectionShell";
@@ -106,7 +107,7 @@ export default function FeaturesPage() {
                 GitHub
               </a>
               <a
-                href="https://discord.gg/noioncloud"
+                href="https://discord.gg/YPUzH4xqwS"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-night2 px-5 py-2 rounded-lg border border-night2 hover:border-gold transition"
@@ -147,9 +148,12 @@ export default function FeaturesPage() {
         <section className="text-center py-20 space-y-4">
           <p className="text-ivory/80">Ready to explore Noion?</p>
           <div className="flex flex-wrap gap-3 justify-center">
-            <a href="/#waitlist" className="bg-gold text-night px-6 py-3 rounded-lg font-semibold border border-gold hover:bg-night hover:text-gold transition">
+            <Link
+              href="/#waitlist"
+              className="rounded-lg border border-gold bg-gold px-6 py-3 font-semibold text-night transition hover:bg-night hover:text-gold"
+            >
               Join the Waitlist
-            </a>
+            </Link>
             <a
               href="https://github.com/Slyog"
               target="_blank"

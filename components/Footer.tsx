@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Github, Heart } from "lucide-react";
+import { track } from "@/lib/analytics";
 
 export default function Footer() {
   return (
@@ -24,6 +25,8 @@ export default function Footer() {
           <a
             href="#waitlist"
             className="text-ivory/70 hover:text-ivory transition"
+            data-analytics="cta_footer_waitlist"
+            onClick={() => track("cta_footer_waitlist")}
           >
             Waitlist
           </a>
@@ -34,6 +37,8 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-ivory/70 hover:text-ivory transition"
+            data-analytics="cta_footer_github"
+            onClick={() => track("cta_footer_github")}
           >
             <Github className="w-4 h-4" aria-hidden="true" />
             <span className="sr-only">GitHub</span>
@@ -43,6 +48,8 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-ivory/70 hover:text-ivory transition"
+            data-analytics="cta_footer_donate"
+            onClick={() => track("cta_footer_donate")}
           >
             <Heart className="w-4 h-4" aria-hidden="true" />
             <span className="sr-only">Donate</span>

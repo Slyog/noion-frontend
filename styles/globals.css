@@ -12,3 +12,8 @@ body {
 a {
   @apply text-primary hover:text-accent-dim transition-all duration-200;
 }
+
+:focus-visible {
+  outline: 2px solid #f2c94c;
+  outline-offset: 3px;
+}
