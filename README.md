@@ -3,7 +3,7 @@
 Noion is a minimal, fast landing page for the upcoming Relation Network:
 a living knowledge graph that links thoughts (text or voice) by topic, place, time, and mood.
 
-Website: coming soon at app.noion.cloud
+Website: coming soon at noion.cloud
 
 Tech stack: Next.js (App Router) · Tailwind · ScrollXUI · Framer Motion
 
