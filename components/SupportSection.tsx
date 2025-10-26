@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Github, Heart } from "lucide-react";
 import { Button } from "./ui/button";
@@ -16,7 +16,7 @@ import {
 export default function SupportSection() {
   return (
     <section className="max-w-5xl mx-auto px-6 md:px-12 py-24 text-center space-y-6">
-      <h2 className="text-3xl md:text-4xl font-bold">Support Noion</h2>
+      <h2 className="text-3xl md:text-4xl font-bold">Support noion</h2>
       <p className="text-ivory/80 max-w-2xl mx-auto">
         Help us grow an open, humane approach to AI and knowledge. Your support
         keeps the Relation Network independent and intentional.
@@ -60,7 +60,7 @@ export default function SupportSection() {
             <AlertDialogHeader>
               <AlertDialogTitle>Independent by design</AlertDialogTitle>
               <AlertDialogDescription>
-                Noion separates identity from content and routes every pledge to
+                noion separates identity from content and routes every pledge to
                 infrastructure and research. Open conversations live on Discord,
                 and source is mirrored to make community review simple.
               </AlertDialogDescription>
@@ -74,3 +74,4 @@ export default function SupportSection() {
     </section>
   );
 }
+

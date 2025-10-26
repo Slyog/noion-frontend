@@ -1,17 +1,17 @@
-## Repository snapshot
+﻿## Repository snapshot
 
 - This repo is a small Next.js + Tailwind landing site for the Noion.cloud vision. Key files in the workspace:
-  - `package.json` — dev/build scripts and dependencies
-  - `pages/` — Next.js pages (classic `pages/` routing)
-  - `styles/globals.css` — Tailwind directives
+  - `package.json` â€” dev/build scripts and dependencies
+  - `pages/` â€” Next.js pages (classic `pages/` routing)
+  - `styles/globals.css` â€” Tailwind directives
   - `tailwind.config.js` and `postcss.config.js`
   - `next.config.js`
-  - `Hauptseite (Brand-Fokus, Vision, Waitlist, App-Demo).txt` — original content file (preserve)
+  - `Hauptseite (Brand-Fokus, Vision, Waitlist, App-Demo).txt` â€” original content file (preserve)
 
 ## Quick mental model for agents
 
 - This is a single-page landing app using Next.js (React) + Tailwind. `pages/index.js` is the primary entry; styles are provided by Tailwind in `styles/globals.css` and processed through PostCSS.
-- The German content file in the repo root should be preserved unless the user explicitly asks for migration — prefer adding a rendered copy under `pages/` instead of renaming the original file.
+- The German content file in the repo root should be preserved unless the user explicitly asks for migration â€” prefer adding a rendered copy under `pages/` instead of renaming the original file.
 
 ## Actionable checklist for the agent
 
@@ -23,11 +23,11 @@
 
 - Uses `pages/` routing (not the `app/` directory). Follow that pattern for page and API placement.
 - Preserve non-code content filenames and encoding (e.g., the German `Hauptseite ... .txt`). When adding code files, prefer ASCII/kebab-case (e.g., `components/hero.js`).
-- Tailwind is configured via `tailwind.config.js` and consumed in `styles/globals.css` with `@tailwind` directives — install dependencies before running the dev server so PostCSS/Tailwind processing succeeds.
+- Tailwind is configured via `tailwind.config.js` and consumed in `styles/globals.css` with `@tailwind` directives â€” install dependencies before running the dev server so PostCSS/Tailwind processing succeeds.
 
 ## Integration & secrets
 
-- No runtime integrations or credentials exist in the repo. The path suggests SolarEdgeCloud integration intentions — do not add real credentials. Add `.env.local.example` placeholders and request secrets from the user if needed.
+- No runtime integrations or credentials exist in the repo. The path suggests SolarEdgeCloud integration intentions â€” do not add real credentials. Add `.env.local.example` placeholders and request secrets from the user if needed.
 
 ## How to run (PowerShell)
 
@@ -40,11 +40,11 @@ Open http://localhost:3000 to preview the site.
 
 ## Files to inspect when changing common things
 
-- `pages/index.js` — hero, feature cards, and waitlist form
-- `pages/_app.js` — global styles import
-- `styles/globals.css` — Tailwind directives
-- `tailwind.config.js` / `postcss.config.js` — build tool config
-- `package.json` — scripts and dependency pins
+- `pages/index.js` â€” hero, feature cards, and waitlist form
+- `pages/_app.js` â€” global styles import
+- `styles/globals.css` â€” Tailwind directives
+- `tailwind.config.js` / `postcss.config.js` â€” build tool config
+- `package.json` â€” scripts and dependency pins
 
 ## PR guidance
 
@@ -71,7 +71,7 @@ Tell me which of these you'd like next and I'll implement it.
 
 1. Run a workspace search for the common manifest and config files listed above. If none exist, ask the user whether they want a static site (HTML/CSS), a framework (Next/Vite/Svelte), or a plain content repo.
 2. If a manifest is found, use that to infer build/test commands and update the README accordingly. Example: if `package.json` exists, use `npm run dev` / `npm run build` as documented in that file.
-3. Preserve text encoding and filenames: the repo uses a German title for the main page — avoid renaming files unless requested.
+3. Preserve text encoding and filenames: the repo uses a German title for the main page â€” avoid renaming files unless requested.
 
 ## Patterns and conventions discovered
 
@@ -80,7 +80,7 @@ Tell me which of these you'd like next and I'll implement it.
 
 ## Integration & external dependencies
 
-- No explicit external integrations or API keys found in the repository content. The workspace path mentions "Noion-SolarEdgeCloud" — treat any inference about SolarEdge or cloud integrations as speculative and verify with the user before adding credentials or integrations.
+- No explicit external integrations or API keys found in the repository content. The workspace path mentions "Noion-SolarEdgeCloud" â€” treat any inference about SolarEdge or cloud integrations as speculative and verify with the user before adding credentials or integrations.
 
 ## Guidance for edits and PRs
 
@@ -94,8 +94,9 @@ Tell me which of these you'd like next and I'll implement it.
 
 ## When you are unsure
 
-- Ask 1–2 focused questions: (1) What language/framework should I assume? (2) Do you want me to scaffold a build system or only edit content? Provide suggested options if helpful.
+- Ask 1â€“2 focused questions: (1) What language/framework should I assume? (2) Do you want me to scaffold a build system or only edit content? Provide suggested options if helpful.
 
 ---
 
 If anything here is incomplete or you want this file to be more opinionated (e.g., scaffold a Next/Vite project automatically), tell me which option to prefer and I will update the instructions and scaffold accordingly.
+

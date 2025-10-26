@@ -1,11 +1,11 @@
-## Noion — Your thoughts, linked
+﻿## noion â€” Your thoughts, linked
 
-Noion is a minimal, fast landing page for the upcoming Relation Network:
+noion is a minimal, fast landing page for the upcoming Relation Network:
 a living knowledge graph that links thoughts (text or voice) by topic, place, time, and mood.
 
 Website: coming soon at noion.cloud
 
-Tech stack: Next.js (App Router) · Tailwind · ScrollXUI · Framer Motion
+Tech stack: Next.js (App Router) Â· Tailwind Â· ScrollXUI Â· Framer Motion
 
 Claim: Your thoughts, linked
 
@@ -13,36 +13,36 @@ Short tagline: The Relation Network.
 
 ##  Features (Frontend)
 
-Hero / Value Proposition in Noion branding (dark, gold–gray, techno-clean)
+Hero / Value Proposition in noion branding (dark, goldâ€“gray, techno-clean)
 
 Living Graph section (product narrative)
 
 Core Features + Feature Matrix (Free vs. Premium)
 
-How it works (Capture – Connect – Decide)
-Capture supports typing or speaking → generates metadata
+How it works (Capture â€“ Connect â€“ Decide)
+Capture supports typing or speaking â†’ generates metadata
 
-Roadmap 2025 (MVP → Collective Graph → Integrations)
+Roadmap 2025 (MVP â†’ Collective Graph â†’ Integrations)
 
 CTA: Waitlist (working API, stores entries locally)
 
 ##  Project Structure
 ```bash
 app/
-├─ api/
-│  └─ waitlist/
-│     └─ route.ts       # POST /api/waitlist → data/waitlist.csv
-├─ components/          # Navbar, Hero, LivingGraph, Features, Matrix, Roadmap, CTA, Footer
-├─ providers/
-│  └─ MotionProvider.tsx
-├─ layout.tsx           # Metadata + Favicons + Manifest
-└─ page.tsx             # Landing composition
+â”œâ”€ api/
+â”‚  â””â”€ waitlist/
+â”‚     â””â”€ route.ts       # POST /api/waitlist â†’ data/waitlist.csv
+â”œâ”€ components/          # Navbar, Hero, LivingGraph, Features, Matrix, Roadmap, CTA, Footer
+â”œâ”€ providers/
+â”‚  â””â”€ MotionProvider.tsx
+â”œâ”€ layout.tsx           # Metadata + Favicons + Manifest
+â””â”€ page.tsx             # Landing composition
 public/
-└─ favicons/            # favicon.ico + PNGs + site.webmanifest
+â””â”€ favicons/            # favicon.ico + PNGs + site.webmanifest
 data/
-└─ waitlist.csv         # local CSV storage
+â””â”€ waitlist.csv         # local CSV storage
 styles/
-└─ globals.css
+â””â”€ globals.css
 ```
 
 ## Local Development
@@ -61,7 +61,7 @@ npm run start
 
 The landing page exposes a tiny server route:
 
-POST /api/waitlist → { email }
+POST /api/waitlist â†’ { email }
 
 Stores entries in data/waitlist.csv (columns: email,timestamp)
 
@@ -84,7 +84,7 @@ app/layout.tsx includes:
 
 ```ts
 export const metadata = {
-  title: "Noion - Your thoughts, linked",
+  title: "noion - Your thoughts, linked",
   description: "The Relation Network.",
   icons: {
     icon: "/favicons/favicon.ico",
@@ -102,3 +102,4 @@ export const metadata = {
   manifest: "/favicons/site.webmanifest",
 };
 ```
+

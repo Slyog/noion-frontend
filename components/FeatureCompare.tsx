@@ -8,7 +8,7 @@ const rows = [
   { feature: "Voice Capture", free: "Yes", pro: "Yes + transcript tagging" },
   { feature: "Private Sync", free: "Device only", pro: "Encrypted Cloud" },
   { feature: "Pattern View", free: "Timeline only", pro: "Timeline + Mood + Location" },
-  { feature: "Integrations", free: "\u2014", pro: "API Keys & Webhooks" },
+  { feature: "Integrations", free: "-", pro: "API Keys & Webhooks" },
 ];
 
 const rowVariants = {

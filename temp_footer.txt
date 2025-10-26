@@ -1,14 +1,15 @@
-export default function Footer() {
+﻿export default function Footer() {
   return (
     <footer className="border-t border-border/40 bg-surface/60 px-6 py-10 text-center text-sm text-text-subtle">
       <div className="mx-auto flex max-w-5xl flex-col gap-4">
-        <p className="font-semibold text-text">Noion</p>
-        <p>Thinking as Infrastructure – dein lebender Wissensgraph.</p>
+        <p className="font-semibold text-text">noion</p>
+        <p>Thinking as Infrastructure â€“ dein lebender Wissensgraph.</p>
         <p className="text-xs text-text-subtle">
-          © {new Date().getFullYear()} Noion Labs. All rights reserved.
+          Â© {new Date().getFullYear()} noion Labs. All rights reserved.
         </p>
       </div>
     </footer>
   );
 }
+
 

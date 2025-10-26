@@ -1,6 +1,6 @@
-{
-  "name": "Noion - The Thought Network",
-  "short_name": "Noion",
+﻿{
+  "name": "noion - The Thought Network",
+  "short_name": "noion",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0D1B2A",
@@ -14,3 +14,4 @@
     { "src": "/icons/icon-512x512.png", "sizes": "512x512", "type": "image/png" }
   ]
 }
+

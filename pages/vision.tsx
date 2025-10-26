@@ -1,11 +1,11 @@
-import Head from "next/head";
+﻿import Head from "next/head";
 import Link from "next/link";
 import SupportSection from "../components/SupportSection";
 import Footer from "../components/Footer";
 
 const metadata = {
-  title: "Noion - Vision & Story",
-  description: "Dive into the long-form narrative that guides the Noion Thought Network.",
+  title: "noion - Vision & Story",
+  description: "Dive into the long-form narrative that guides the noion Thought Network.",
   image: "/og/noion-main.png",
 };
 
@@ -21,13 +21,13 @@ export default function VisionPage() {
       <article className="bg-night text-ivory min-h-screen">
         <div className="mx-auto max-w-4xl px-6 py-20 space-y-10">
           <Link href="/" className="text-sm text-ivory/70 hover:text-gold transition">
-            ← Back to landing
+            â† Back to landing
           </Link>
           <header className="space-y-4">
-            <p className="text-xs uppercase tracking-[0.4em] text-ivory/60">Noion Vision</p>
+            <p className="text-xs uppercase tracking-[0.4em] text-ivory/60">noion Vision</p>
             <h1 className="text-4xl font-semibold text-gold">Clean energy, luminous software.</h1>
             <p className="text-lg text-ivory/80">
-              Noion is a product-first approach to collective intelligence - an interface where human ideas become living knowledge. Instead of another feed, Noion builds a navigable
+              noion is a product-first approach to collective intelligence - an interface where human ideas become living knowledge. Instead of another feed, noion builds a navigable
               graph that learns from context and reveals connections. Behind the scenes, a renewable compute engine keeps intelligence efficient and responsible.
             </p>
           </header>
@@ -45,7 +45,7 @@ export default function VisionPage() {
 
           <section aria-labelledby="support">
             <h2 id="support" className="text-2xl font-semibold text-ivory">
-              Support Noion
+              Support noion
             </h2>
             <p className="text-ivory/80">
               This project runs on passion, caffeine, and solar data. Every contribution helps expand an open, humane approach to intelligence.
@@ -65,7 +65,7 @@ export default function VisionPage() {
                 </a>
               </li>
             </ul>
-            <p className="mt-4 text-ivory/70">Your energy keeps Noion alive.</p>
+            <p className="mt-4 text-ivory/70">Your energy keeps noion alive.</p>
           </section>
         </div>
         <SupportSection />
@@ -74,5 +74,6 @@ export default function VisionPage() {
     </>
   );
 }
+
 
 

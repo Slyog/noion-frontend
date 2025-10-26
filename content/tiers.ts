@@ -1,4 +1,4 @@
-export type Tier = {
+﻿export type Tier = {
   name: string;
   tagline: string;
   bullets: string[];
@@ -7,7 +7,7 @@ export type Tier = {
 export const tiers: Tier[] = [
   {
     name: "Free",
-    tagline: "Capture & auto-link — your private base layer.",
+    tagline: "Capture & auto-link â€” your private base layer.",
     bullets: [
       "Markdown notes and voice capture",
       "Auto-links back to existing thoughts",
@@ -17,7 +17,7 @@ export const tiers: Tier[] = [
   },
   {
     name: "Premium",
-    tagline: "More context, more range — grow deeper into the graph.",
+    tagline: "More context, more range â€” grow deeper into the graph.",
     bullets: [
       "Expanded pattern and timeline views",
       "Custom tags and entities (people, projects, places)",
@@ -27,7 +27,7 @@ export const tiers: Tier[] = [
   },
   {
     name: "Team (coming soon)",
-    tagline: "Resonance for tight crews — the collective graph.",
+    tagline: "Resonance for tight crews â€” the collective graph.",
     bullets: [
       "Shared boards with real-time linking",
       "Roles and visibility controls",
@@ -36,3 +36,4 @@ export const tiers: Tier[] = [
     ],
   },
 ];
+

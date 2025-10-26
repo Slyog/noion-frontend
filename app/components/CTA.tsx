@@ -1,4 +1,4 @@
-import FadeInSection from "./FadeInSection";
+﻿import FadeInSection from "./FadeInSection";
 import { Input, Button } from "scrollxui";
 
 export default function CTA() {
@@ -12,7 +12,7 @@ export default function CTA() {
           Help shape the living graph
         </h2>
         <p className="mt-4 text-base text-ivory/75 md:text-lg">
-          Get early access to new graph drops and share feedback with the core team while we fine tune Noion.
+          Get early access to new graph drops and share feedback with the core team while we fine tune noion.
         </p>
         <form
           action="/api/waitlist"
@@ -31,9 +31,10 @@ export default function CTA() {
           </Button>
         </form>
         <p className="mt-4 text-xs text-ivory/60">
-          No spam. We’ll reach out only when a new build is ready.
+          No spam. Weâ€™ll reach out only when a new build is ready.
         </p>
       </div>
     </FadeInSection>
   );
 }
+

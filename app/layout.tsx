@@ -4,23 +4,23 @@ import type { ReactNode } from "react";
 import { MotionProvider } from "./providers/MotionProvider";
 
 export const metadata: Metadata = {
-  title: "Noion - Your thoughts, linked",
+  title: "noion - your thoughts, linked",
   description:
     "A living map of your thoughts. Auto-links, mood/place/time layers, and a clean path to your next move.",
   metadataBase: new URL("https://noion.cloud"),
   alternates: { canonical: "https://noion.cloud/" },
   openGraph: {
-    title: "Noion - Your thoughts, linked",
+    title: "noion - your thoughts, linked",
     description: "Capture > Connect > Decide. See patterns across mood, place, and time.",
     url: "https://noion.cloud",
-    siteName: "Noion",
+    siteName: "noion",
     type: "website",
     images: [
       {
         url: "https://noion.cloud/visuals/meaning-over-text.png",
         width: 1200,
         height: 630,
-        alt: "Noion graph preview",
+        alt: "noion graph preview",
       },
     ],
   },
@@ -54,3 +54,4 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     </html>
   );
 }
+

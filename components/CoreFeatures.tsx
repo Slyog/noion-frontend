@@ -1,4 +1,4 @@
-// components/Features.tsx  (oder wo deine Datei liegt)
+﻿// components/Features.tsx  (oder wo deine Datei liegt)
 import FadeInSection from "./FadeInSection";
 import {
   Card,
@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "scrollxui";
-import { tiers } from "@/content/tiers"; // <— NEU: richtiger Pfad
+import { tiers } from "@/content/tiers"; // <â€” NEU: richtiger Pfad
 
 export default function Features() {
   return (
@@ -47,3 +47,4 @@ export default function Features() {
     </FadeInSection>
   );
 }
+

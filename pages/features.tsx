@@ -1,4 +1,4 @@
-import Head from "next/head";
+﻿import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Brain, Users, Shield } from "lucide-react";
@@ -9,7 +9,7 @@ import { GradientOrbs } from "../components/GradientOrbs";
 
 const pageMetadata = {
   title: "Features that evolve with you",
-  description: "From thought capture to solar-powered intelligence, Noion scales with every tier.",
+  description: "From thought capture to solar-powered intelligence, noion scales with every tier.",
 };
 
 export default function FeaturesPage() {
@@ -21,7 +21,7 @@ export default function FeaturesPage() {
         <meta property="og:image" content="/og/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Noion Cloud - Features" />
+        <meta property="og:image:alt" content="noion Cloud - Features" />
         <meta name="twitter:image" content="/og/og-image.png" />
       </Head>
 
@@ -29,7 +29,7 @@ export default function FeaturesPage() {
         <motion.section className="max-w-5xl mx-auto px-6 py-20 text-center" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
           <h1 className="text-4xl md:text-5xl font-bold text-ivory mb-4">Features that evolve with you</h1>
           <p className="text-ivory/80 max-w-2xl mx-auto">
-            Noion grows from a personal thought tool into a collaborative network of minds. Every tier expands your capacity to think, connect, and build sustainably.
+            noion grows from a personal thought tool into a collaborative network of minds. Every tier expands your capacity to think, connect, and build sustainably.
           </p>
         </motion.section>
 
@@ -62,7 +62,7 @@ export default function FeaturesPage() {
 
           <SectionShell
             id="noion-plus"
-            title="Noion+ - Premium Individual"
+            title="noion+ - Premium Individual"
             variant="splitA"
             visual={
               <div className="aspect-[16/10] rounded-xl border border-night2 bg-gradient-to-br from-night2 to-night/70 grid place-items-center">
@@ -71,7 +71,7 @@ export default function FeaturesPage() {
             }
           >
             <p>
-              Step into an adaptive second brain. Noion+ adds semantic search, encrypted backups, offline sync, custom themes, and a daily journal mode that surfaces AI insights from
+              Step into an adaptive second brain. noion+ adds semantic search, encrypted backups, offline sync, custom themes, and a daily journal mode that surfaces AI insights from
               your reflections.
             </p>
           </SectionShell>
@@ -80,7 +80,7 @@ export default function FeaturesPage() {
 
           <SectionShell
             id="teams"
-            title="Noion Teams - Collaboration & Knowledge"
+            title="noion Teams - Collaboration & Knowledge"
             variant="splitB"
             visual={
               <div className="aspect-[16/10] rounded-xl border border-night2 bg-night2/40 grid place-items-center">
@@ -89,7 +89,7 @@ export default function FeaturesPage() {
             }
           >
             <p className="mb-4">
-              Connect shared insights in real time. Noion Teams delivers knowledge graphs for classrooms, studios, and research squads with multi-level permissions.
+              Connect shared insights in real time. noion Teams delivers knowledge graphs for classrooms, studios, and research squads with multi-level permissions.
             </p>
             <ul className="grid md:grid-cols-2 gap-2 text-ivory/80 mb-6">
               <li>Shared knowledge graphs & live collaboration</li>
@@ -131,7 +131,7 @@ export default function FeaturesPage() {
           >
             <p>
               Deploy a decentralized, renewable compute layer that keeps the Thought Network resilient. Enterprises orchestrate green data sync, governance dashboards, and the upcoming
-              API + SDK (Q3 2026) to plug Noion directly into their energy stack.
+              API + SDK (Q3 2026) to plug noion directly into their energy stack.
             </p>
           </SectionShell>
 
@@ -146,7 +146,7 @@ export default function FeaturesPage() {
         </div>
 
         <section className="text-center py-20 space-y-4">
-          <p className="text-ivory/80">Ready to explore Noion?</p>
+          <p className="text-ivory/80">Ready to explore noion?</p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link
               href="/#waitlist"
@@ -168,5 +168,6 @@ export default function FeaturesPage() {
     </>
   );
 }
+
 
 

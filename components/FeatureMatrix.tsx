@@ -1,4 +1,4 @@
-// content/featureMatrix.ts
+﻿// content/featureMatrix.ts
 export const featureMatrix = {
   title: "Compare how each layer grows",
   subline:
@@ -26,8 +26,9 @@ export const featureMatrix = {
     },
     {
       feature: "Integrations",
-      free: "—",
+      free: "â€”",
       premium: "API Keys & Webhooks",
     },
   ],
 } as const;
+

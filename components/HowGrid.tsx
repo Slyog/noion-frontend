@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,7 +7,7 @@ import { Mic, PenTool, Network } from "lucide-react";
 const cards = [
   {
     title: "Express",
-    body: "Write or speak a thought. Noion structures each expression as a relational node.",
+    body: "Write or speak a thought. noion structures each expression as a relational node.",
     icon: (
       <div className="flex items-center gap-2">
         <PenTool className="h-5 w-5 text-gold" />
@@ -17,7 +17,7 @@ const cards = [
   },
   {
     title: "Relate",
-    body: "Noion embeds your input and links it with memories and concepts across your graph.",
+    body: "noion embeds your input and links it with memories and concepts across your graph.",
     icon: <Network className="h-6 w-6 text-gold" />,
   },
   {
@@ -58,3 +58,4 @@ export default function HowGrid() {
     </motion.div>
   );
 }
+

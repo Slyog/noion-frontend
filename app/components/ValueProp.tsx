@@ -1,4 +1,4 @@
-import FadeInSection from "./FadeInSection";
+﻿import FadeInSection from "./FadeInSection";
 
 const pillars = [
   {
@@ -21,7 +21,7 @@ export default function ValueProp() {
       <div className="mx-auto max-w-6xl space-y-8 px-6 py-20">
         <div className="text-center">
           <p className="text-xs uppercase tracking-[0.4em] text-gold/70">
-            Why Noion
+            Why noion
           </p>
           <h2 className="mt-4 text-3xl font-semibold md:text-4xl">
             A product stack tuned for living knowledge
@@ -50,3 +50,4 @@ export default function ValueProp() {
     </FadeInSection>
   );
 }
+

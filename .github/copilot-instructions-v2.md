@@ -1,12 +1,12 @@
-## Repository snapshot
+﻿## Repository snapshot
 
 - This repo was scaffolded as a small Next.js + Tailwind landing site for the Noion.cloud vision. Key files in the workspace:
-  - `package.json` — dev/build scripts and dependencies
-  - `pages/` — Next.js pages (uses the classic `pages/` routing)
-  - `styles/globals.css` — Tailwind directives
+  - `package.json` â€” dev/build scripts and dependencies
+  - `pages/` â€” Next.js pages (uses the classic `pages/` routing)
+  - `styles/globals.css` â€” Tailwind directives
   - `tailwind.config.js` and `postcss.config.js`
   - `next.config.js`
-  - `Hauptseite (Brand-Fokus, Vision, Waitlist, App-Demo).txt` — original content file (preserve)
+  - `Hauptseite (Brand-Fokus, Vision, Waitlist, App-Demo).txt` â€” original content file (preserve)
 
 ## Quick mental model for agents
 
@@ -34,13 +34,14 @@ npm run dev
 
 ## Files to look at for common edits
 
-- `pages/index.js` — layout and hero/waitlist demo
-- `styles/globals.css` — Tailwind `@tailwind` directives
-- `tailwind.config.js` — content paths
-- `package.json` — scripts and deps
+- `pages/index.js` â€” layout and hero/waitlist demo
+- `styles/globals.css` â€” Tailwind `@tailwind` directives
+- `tailwind.config.js` â€” content paths
+- `package.json` â€” scripts and deps
 
 ## PR guidance
 
 - Keep commits small and focused. When adding dependencies, include rationale in the PR description and update `README.md` with new commands.
 
 If you'd like me to replace the original `.github/copilot-instructions.md` file with this content I can do that (I tried but encountered a merge/write mismatch). Tell me to proceed and I'll overwrite the original file.
+

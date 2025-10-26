@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 
@@ -11,7 +11,7 @@ export default function VisionSection() {
         transition={{ duration: 0.5 }}
         className="text-4xl md:text-5xl font-bold mb-8"
       >
-        The Vision of Noion
+        The Vision of noion
       </motion.h2>
       <motion.p
         initial={{ opacity: 0 }}
@@ -19,9 +19,9 @@ export default function VisionSection() {
         transition={{ delay: 0.1, duration: 0.5 }}
         className="text-ivory/85 max-w-3xl mx-auto text-lg leading-relaxed"
       >
-        Noion is a product-first approach to collective intelligence - an
+        noion is a product-first approach to collective intelligence - an
         interface where human ideas become living knowledge. Instead of another
-        feed, Noion builds a navigable graph that learns from context and
+        feed, noion builds a navigable graph that learns from context and
         reveals connections. The platform centers human meaning, clarity, and
         long-term usefulness.
       </motion.p>
@@ -34,7 +34,7 @@ export default function VisionSection() {
         {[
           {
             title: "Phase 1 - 2025",
-            body: "Launch of the Noion Platform - establishing the brand, waitlist, and community foundation.",
+            body: "Launch of the noion Platform - establishing the brand, waitlist, and community foundation.",
           },
           {
             title: "Phase 2 - 2026",
@@ -42,7 +42,7 @@ export default function VisionSection() {
           },
           {
             title: "Phase 3 - 2027+",
-            body: "Expansion into decentralized, renewable compute grids - a global Noion network of thought.",
+            body: "Expansion into decentralized, renewable compute grids - a global noion network of thought.",
           },
         ].map((item) => (
           <div
@@ -57,3 +57,4 @@ export default function VisionSection() {
     </section>
   );
 }
+

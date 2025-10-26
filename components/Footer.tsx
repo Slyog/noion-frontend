@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { Github, Heart } from "lucide-react";
@@ -56,9 +56,10 @@ export default function Footer() {
           </a>
         </div>
         <p className="text-xs footer-muted">
-          &copy; 2025 Noion. All rights reserved.
+          &copy; 2025 noion. All rights reserved.
         </p>
       </div>
     </footer>
   );
 }
+

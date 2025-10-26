@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { FormEvent, useState } from "react";
 import { motion } from "framer-motion";
@@ -39,7 +39,7 @@ export default function WaitlistSection() {
       <h2 className="text-4xl font-bold">Join the Waitlist</h2>
       <p className="text-ivory/80 max-w-2xl mx-auto">
         Be among the first to explore the Relation Network. Early supporters
-        will receive access to the Noion beta.
+        will receive access to the noion beta.
       </p>
 
       <div className="max-w-md mx-auto">
@@ -72,13 +72,14 @@ export default function WaitlistSection() {
       </div>
 
       {status === "success" && (
-        <p className="text-gold">✅ You’re on the list - thank you.</p>
+        <p className="text-gold">âœ… Youâ€™re on the list - thank you.</p>
       )}
       {status === "error" && (
         <p className="text-red-400">
-          ⚠️ Something went wrong. Please try again.
+          âš ï¸ Something went wrong. Please try again.
         </p>
       )}
     </motion.section>
   );
 }
+

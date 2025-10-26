@@ -45,7 +45,7 @@
     "tsx": "^4.20.6",
     "typescript": "^5.9.3"
   },
-  "description": "**Noion** ist eine minimalistische, schnelle Landingpage für das kommende **Relation Network**:  \r Ein lebender Wissensgraph, der Gedanken (Text oder Voice) verknüpft — nach Thema, Ort, Zeit und Stimmung.",
+  "description": "**noion** ist eine minimalistische, schnelle Landingpage fÃ¼r das kommende **Relation Network**:  \r Ein lebender Wissensgraph, der Gedanken (Text oder Voice) verknÃ¼pft â€” nach Thema, Ort, Zeit und Stimmung.",
   "main": "next-sitemap.config.js",
   "directories": {
     "lib": "lib"
@@ -54,3 +54,4 @@
   "author": "",
   "license": "ISC"
 }
+

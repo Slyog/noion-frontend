@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Github } from "lucide-react";
@@ -20,7 +20,7 @@ export default function Navbar() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3 text-sm text-ivory/80">
         <Link href="/" className="text-xl font-semibold text-ivory hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60 focus-visible:ring-offset-2 focus-visible:ring-offset-night">
-          Noion
+          noion
         </Link>
         <div className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
@@ -88,4 +88,5 @@ export default function Navbar() {
     </motion.nav>
   );
 }
+
 
