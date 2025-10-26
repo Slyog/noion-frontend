@@ -1,6 +1,7 @@
 "use client";
 
 import FadeInSection from "./FadeInSection";
+import { motion } from "framer-motion";
 import { tiers } from "@/content/tiers";
 import { Section } from "@/components/Section";
 
@@ -12,9 +13,15 @@ export default function Features() {
           <p className="text-xs uppercase tracking-[0.4em] text-gold/70">
             Core Features
           </p>
-          <h2 className="mt-4 text-3xl font-semibold md:text-4xl">
+          <motion.h2
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="mt-4 text-3xl font-semibold md:text-4xl"
+          >
             Choose how you grow the graph
-          </h2>
+          </motion.h2>
         </div>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">

@@ -1,19 +1,28 @@
-import "@/styles/globals.css";
-import type { Metadata } from "next";
+﻿import "@/styles/globals.css";
+import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { MotionProvider } from "./providers/MotionProvider";
 
 export const metadata: Metadata = {
   title: "Noion - Your thoughts, linked",
-  description: "A living map of your thoughts. Auto-links, mood/place/time layers, and a clean path to your next move.",
+  description:
+    "A living map of your thoughts. Auto-links, mood/place/time layers, and a clean path to your next move.",
   metadataBase: new URL("https://noion.cloud"),
-  alternates: { canonical: "/" },
+  alternates: { canonical: "https://noion.cloud/" },
   openGraph: {
     title: "Noion - Your thoughts, linked",
-    description: "Capture → Connect → Decide. See patterns across mood, place, and time.",
+    description: "Capture > Connect > Decide. See patterns across mood, place, and time.",
     url: "https://noion.cloud",
     siteName: "Noion",
     type: "website",
+    images: [
+      {
+        url: "https://noion.cloud/visuals/meaning-over-text.png",
+        width: 1200,
+        height: 630,
+        alt: "Noion graph preview",
+      },
+    ],
   },
   icons: {
     icon: "/favicons/favicon.ico",
@@ -27,9 +36,18 @@ export const metadata: Metadata = {
   manifest: "/favicons/site.webmanifest",
 };
 
+export const viewport: Viewport = {
+  themeColor: "#0e0e0f",
+};
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="bg-night text-ivory">
+      <head>
+        <link rel="preload" as="image" href="/favicons/noion_favicon_64.png" />
+        <link rel="preload" as="font" href="/fonts/Inter-Regular.woff2" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" as="font" href="/fonts/Inter-SemiBold.woff2" type="font/woff2" crossOrigin="anonymous" />
+      </head>
       <body className="antialiased">
         <MotionProvider>{children}</MotionProvider>
       </body>

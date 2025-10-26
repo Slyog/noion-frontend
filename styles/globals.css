@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Inter-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/Inter-SemiBold.woff2") format("woff2");
+}
+
 html,
 body {
   background-color: #0b0b0c;
@@ -16,4 +32,36 @@ a {
 :focus-visible {
   outline: 2px solid #f2c94c;
   outline-offset: 3px;
+}
+
+.shadow-gold-glow {
+  --gold-glow: 0 0 25px rgba(242, 201, 76, 0.25);
+  box-shadow: var(--gold-glow);
+}
+
+.hover\:shadow-gold-glow:hover,
+.focus\:shadow-gold-glow:focus,
+.focus-visible\:shadow-gold-glow:focus-visible {
+  box-shadow: 0 0 30px rgba(242, 201, 76, 0.35);
+}
+
+@keyframes goldPulse {
+  0% {
+    box-shadow: 0 0 0 rgba(242, 201, 76, 0.0);
+  }
+  60% {
+    box-shadow: 0 0 28px rgba(242, 201, 76, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(242, 201, 76, 0.0);
+  }
+}
+
+.btn-gold-pulse {
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+}
+
+.btn-gold-pulse:hover:not(:disabled) {
+  animation: goldPulse 1.5s ease-in-out infinite;
+  transform: translateY(-1px);
 }

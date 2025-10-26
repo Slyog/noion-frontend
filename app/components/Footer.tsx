@@ -11,7 +11,7 @@ export default function Footer() {
         </a>
         {"  -  "}
         <a
-          href="https://github.com/yourorg/noion"
+          href="https://github.com/Slyog/noion"
           className="text-primary hover:text-accent-dim"
         >
           GitHub

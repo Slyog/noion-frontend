@@ -1,9 +1,10 @@
-"use client";
+﻿"use client";
 import { useState } from "react";
 import Snackbar from "./Snackbar";
 import { track } from "@/lib/analytics";
 
 const emailPattern = /^\S+@\S+\.\S+$/;
+const successMessage = "\\u2728 You're on the list!";
 
 export default function WaitlistForm() {
   const [email, setEmail] = useState("");
@@ -34,7 +35,7 @@ export default function WaitlistForm() {
         setEmail("");
         setStatus("success");
         setSnackbar(true);
-        setTimeout(() => setSnackbar(false), 2600);
+        setTimeout(() => setSnackbar(false), 2500);
         track("waitlist_submit");
       }
     } catch {
@@ -45,15 +46,11 @@ export default function WaitlistForm() {
   }
 
   const invalid = status === "error";
+  const helperText = invalid ? "Please enter a valid email." : "Double opt-in. Unsubscribe anytime. Privacy-first.";
 
   return (
     <>
-      <form
-        id="waitlist"
-        onSubmit={submit}
-        className="mx-auto mt-6 flex w-full max-w-xl flex-col gap-3"
-        noValidate
-      >
+      <form id="waitlist" onSubmit={submit} className="mx-auto mt-6 flex w-full max-w-xl flex-col gap-3" noValidate>
         <div className="flex flex-col gap-2 sm:flex-row">
           <input
             type="email"
@@ -64,9 +61,9 @@ export default function WaitlistForm() {
               if (invalid) setStatus("idle");
             }}
             placeholder="you@example.com"
-            className={`w-full rounded-xl border bg-night2/60 px-4 py-3 text-base text-ivory outline-none focus:border-gold ${
+            className={`w-full rounded-2xl border bg-night2/60 px-4 py-3 text-base text-ivory outline-none transition-all duration-200 ${
               invalid ? "border-red-500" : "border-white/10"
-            }`}
+            } focus:border-gold focus:bg-night/60 focus:shadow-gold-glow`}
             aria-label="Email address"
             aria-invalid={invalid}
             aria-describedby={helperId}
@@ -74,21 +71,21 @@ export default function WaitlistForm() {
           <button
             type="submit"
             disabled={loading}
-            className="rounded-xl bg-gold px-5 py-3 font-semibold text-night transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-gold/60 focus:ring-offset-2 focus:ring-offset-night disabled:opacity-60"
+            className="btn-gold-pulse rounded-2xl bg-gold px-5 py-3 font-semibold text-night transition focus:outline-none focus:ring-2 focus:ring-gold/60 focus:ring-offset-2 focus:ring-offset-night disabled:cursor-not-allowed disabled:opacity-60"
             data-analytics="cta_waitlist_submit"
             onClick={() => track("cta_waitlist_submit_click")}
           >
             {loading ? "..." : "Join"}
           </button>
         </div>
-        <p id={helperId} className={`text-xs ${invalid ? "text-red-400" : "text-ivory/60"}`}>
-          {invalid ? "Please enter a valid email." : "Double opt-in. Unsubscribe anytime. Privacy-first."}
+        <p id={helperId} className={`mt-1 text-xs ${invalid ? "text-red-400" : "text-ivory/50"}`}>
+          {helperText}
         </p>
         <div className="sr-only" aria-live="polite">
-          {status === "success" ? "You're on the list" : invalid ? "Please enter a valid email" : ""}
+          {status === "success" ? successMessage : invalid ? "Please enter a valid email" : ""}
         </div>
       </form>
-      <Snackbar show={snackbar} text="You're on the list ✨" />
+      <Snackbar show={snackbar} text={successMessage} />
     </>
   );
 }
