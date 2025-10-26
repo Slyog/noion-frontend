@@ -1,10 +1,10 @@
 export const roadmap = {
-  title: "Shipping the SolarEdge graph in three waves",
+  title: "Shipping the thought graph in three waves",
   subline:
     "Each phase adds a practical layer: capture, collective awareness, then integrations for teams that need them.",
   phases: [
     {
-      quarter: "Q4 2025",
+      quarter: "Q3 2025",
       status: "In progress",
       heading: "Private graph launch",
       bullets: [
@@ -30,7 +30,7 @@ export const roadmap = {
       bullets: [
         "API keys and webhooks",
         "Automation hooks for capture and routing",
-        "SolarEdge Cloud hosting and priority compute",
+        "Cloud hosting and priority compute",
       ],
     },
   ],

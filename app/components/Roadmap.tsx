@@ -7,14 +7,14 @@ import {
   CardHeader,
   CardTitle,
 } from "scrollxui";
-import { roadmap } from "../data/roadmap";
+import { roadmap } from "@/content/roadmap";
 
 export default function Roadmap() {
   return (
     <FadeInSection id="roadmap" className="bg-night2/30 text-ivory">
       <div className="mx-auto max-w-6xl px-6 py-20 text-center">
         <p className="text-xs uppercase tracking-[0.4em] text-gold/70">
-          Roadmap 2025
+          Roadmap 2025 - 2026
         </p>
         <h2 className="mt-4 text-3xl font-semibold md:text-4xl">
           {roadmap.title}

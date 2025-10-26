@@ -1,6 +1,12 @@
 import FadeInSection from "./FadeInSection";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "scrollxui";
-import { howItWorks } from "../data/how-it-works";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "scrollxui";
+import { howItWorks } from "@/content/howItWorks";
 
 export default function HowItWorks() {
   return (
@@ -17,7 +23,10 @@ export default function HowItWorks() {
         </p>
         <div className="mt-12 grid gap-6 text-left md:grid-cols-3">
           {howItWorks.steps.map((step) => (
-            <Card key={step.heading} className="border-night2/60 bg-night2/40 text-ivory">
+            <Card
+              key={step.heading}
+              className="border-night2/60 bg-night2/40 text-ivory"
+            >
               <CardHeader>
                 <CardTitle className="text-gold text-xl">
                   {step.heading}

@@ -7,7 +7,11 @@ type Row = {
 type FeatureMatrixProps = {
   title: string;
   subline: string;
-  rows: Row[];
+  rows: readonly {
+    feature: string;
+    free: string;
+    premium: string;
+  }[];
 };
 
 export default function FeatureMatrix({

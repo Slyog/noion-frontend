@@ -1,48 +1,63 @@
 "use client";
 
-import Link from "next/link";
-import { motion } from "framer-motion";
+import React from "react";
 
-const motionProps = {
-  initial: { opacity: 0, y: 40 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 1, ease: "easeOut" },
+type CTA = { label: string; href: string; variant?: "primary" | "ghost" };
+type Props = {
+  title: string;
+  tagline: string;
+  body: string;
+  ctas: CTA[];
+  teaser?: boolean;
 };
 
-const visionBtn =
-  "inline-flex items-center justify-center rounded-lg border border-gold/60 px-8 py-3 text-base font-medium text-gold transition hover:bg-gold/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/40 focus-visible:ring-offset-2 focus-visible:ring-offset-night";
-
-export default function Hero() {
+export default function Hero({ title, tagline, body, ctas, teaser = false }: Props) {
   return (
-    <div className="relative w-full max-w-4xl mx-auto flex flex-col items-center gap-6 px-6 text-center text-ivory">
-      <motion.h1
-        {...motionProps}
-        className="text-5xl md:text-6xl font-extrabold tracking-tight text-ivory shadow-[0_2px_8px_rgba(0,0,0,0.5)]"
-      >
-        The Relation Network
-      </motion.h1>
+    <section
+      id="hero"
+      className={[
+        "relative flex items-center justify-center px-6 text-center",
+        teaser ? "min-h-[62svh] -mb-8 pb-24" : "min-h-[68svh]",
+      ].join(" ")}
+    >
+      <div className="mx-auto max-w-[70ch]">
+        <h1 className="text-[clamp(2.75rem,6vw,4rem)] font-semibold tracking-tight">
+          {title}
+        </h1>
+        <p className="mt-2 text-lg text-white/80">{tagline}</p>
+        <p className="mt-4 text-base text-white/70 md:text-lg">{body}</p>
 
-      <motion.p
-        {...motionProps}
-        className="max-w-2xl text-lg md:text-xl leading-relaxed text-ivory/80"
-      >
-        An AI layer where thoughts interlink, evolve, and form meaning. Noion
-        transforms raw cognition into living connections - a living graph that
-        grows alongside you.
-      </motion.p>
+        <div className="mt-6 flex flex-wrap justify-center gap-3">
+          {ctas.map((cta) => (
+            <a
+              key={cta.label}
+              href={cta.href}
+              className={[
+                "rounded-full px-5 py-3 text-sm font-medium transition",
+                cta.variant === "ghost"
+                  ? "border border-white/20 hover:border-white/40"
+                  : "bg-white/10 hover:bg-white/20",
+              ].join(" ")}
+            >
+              {cta.label}
+            </a>
+          ))}
+        </div>
+      </div>
 
-      <motion.p
-        {...motionProps}
-        className="italic text-sm uppercase tracking-[0.4em] text-gold/70 mt-2"
-      >
-        Where cognition meets connection. A digital space for evolving thought.
-      </motion.p>
+      {teaser && (
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-black/60" />
+      )}
 
-      <motion.div {...motionProps} className="mt-8">
-        <Link href="/content" className={visionBtn}>
-          Vision
-        </Link>
-      </motion.div>
-    </div>
+      {!teaser && (
+        <a
+          href="#features"
+          aria-label="Scroll to features"
+          className="absolute bottom-6 text-sm text-white/60 hover:text-white/90"
+        >
+          ▼
+        </a>
+      )}
+    </section>
   );
 }
