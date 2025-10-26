@@ -5,13 +5,13 @@ import { MotionProvider } from "./providers/MotionProvider";
 import FaviconWatcher from "@/app/components/FaviconWatcher";
 
 export const metadata: Metadata = {
-  title: "noion - your thoughts, linked",
+  title: "noion",
   description:
     "A living map of your thoughts. Auto-links, mood/place/time layers, and a clean path to your next move.",
   metadataBase: new URL("https://noion.cloud"),
   alternates: { canonical: "https://noion.cloud/" },
   openGraph: {
-    title: "noion - your thoughts, linked",
+    title: "noion",
     description: "Capture > Connect > Decide. See patterns across mood, place, and time.",
     url: "https://noion.cloud",
     siteName: "noion",
