@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import { Github } from "lucide-react";
 import { track } from "@/lib/analytics";
 
-const navLinks = [
+const navLinks: { label: string; href: string; analytics?: string }[] = [
   { label: "Features", href: "#features" },
   { label: "Roadmap", href: "#roadmap" },
   { label: "Waitlist", href: "#waitlist", analytics: "cta_nav_waitlist" },
-] as const;
+];
 
 export default function Navbar() {
   return (
@@ -88,3 +88,4 @@ export default function Navbar() {
     </motion.nav>
   );
 }
+
