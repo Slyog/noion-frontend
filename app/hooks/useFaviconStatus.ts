@@ -8,7 +8,9 @@ export function useFaviconStatus(url = process.env.NEXT_PUBLIC_HEALTH_URL || "/a
 
     const setFavicon = (href: string) => {
       const head = document.head;
-      [...head.querySelectorAll("link[rel*='icon']")].forEach((link) => head.removeChild(link));
+      Array.from(head.querySelectorAll("link[rel*='icon']")).forEach((link) =>
+        head.removeChild(link)
+      );
       const el = document.createElement("link");
       el.rel = "icon";
       el.href = href;
