@@ -5,36 +5,30 @@ import { MotionProvider } from "./providers/MotionProvider";
 import FaviconWatcher from "@/app/components/FaviconWatcher";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://noion-frontend.vercel.app"),
   title: "noion",
-  description:
-    "A living map of your thoughts. Auto-links, mood/place/time layers, and a clean path to your next move.",
-  metadataBase: new URL("https://noion.cloud"),
-  alternates: { canonical: "https://noion.cloud/" },
+  description: "Capture → Connect → Decide. Your thoughts, linked.",
   openGraph: {
-    title: "noion",
-    description: "Capture > Connect > Decide. See patterns across mood, place, and time.",
-    url: "https://noion.cloud",
-    siteName: "noion",
     type: "website",
+    url: "https://noion-frontend.vercel.app",
+    siteName: "noion",
+    title: "Noion — Your thoughts, linked.",
+    description: "Capture → Connect → Decide. Your thoughts, linked.",
     images: [
       {
-        url: "https://noion.cloud/visuals/meaning-over-text.png",
+        url: "/og/noion_og.png",
         width: 1200,
         height: 630,
-        alt: "noion graph preview",
+        alt: "Noion — Your thoughts, linked.",
       },
     ],
   },
-  icons: {
-    icon: "/favicons/favicon.ico",
-    shortcut: "/favicons/favicon.ico",
-    apple: "/favicons/noion_favicon_180.png",
-    other: [
-      { rel: "mask-icon", url: "/favicons/noion_mark_512_transparent.png" },
-      { rel: "icon", url: "/favicons/noion_favicon_512.png", type: "image/png" },
-    ],
+  twitter: {
+    card: "summary_large_image",
+    title: "Noion — Your thoughts, linked.",
+    description: "Capture → Connect → Decide. Your thoughts, linked.",
+    images: ["/og/noion_og.png"],
   },
-  manifest: "/favicons/site.webmanifest",
 };
 
 export const viewport: Viewport = {
